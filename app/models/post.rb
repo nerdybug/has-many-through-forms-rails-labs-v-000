@@ -12,11 +12,11 @@ class Post < ActiveRecord::Base
       self.categories << category
     end
   end
-  
+
   def username=(username)
     self.username = User.find_or_create_by(username: username)
   end
-  
+
   def username
     self.username ? self.username : nil
   end
